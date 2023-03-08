@@ -1,0 +1,141 @@
+/* Estilos para el reseteo de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-image: url(../images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+}
+
+
+/* Estilos para el formulario */
+form {
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 500px;
+}
+
+/* Estilos para los inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de envío */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para las etiquetas */
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+/* Estilos para el menú de navegación */
+nav {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+}
+
+nav h1 {
+    float: left;
+    margin-right: 10px;
+}
+
+/* Estilos para los elementos de la lista */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Estilos para los enlaces */
+nav a {
+    color: white;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+/* Estilos para los elementos de la lista cuando están activos */
+nav a:hover,
+nav a:active {
+    background-color: #555;
+}
+
+/* Estilos para el contenido principal */
+main {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+    min-height: calc(100% - 40px);
+}
+
+main h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+main p {
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+main iframe {
+    width: 500px;
+    margin: 20px;
+}
+
+/* Estilos para la imagen */
+#banda {
+    width: 50%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    text-align: center;
+}
