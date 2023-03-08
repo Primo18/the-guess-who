@@ -1,4 +1,6 @@
-<p align="center"><h1>The Guess Who</h1></p>
+<p align="center">
+  <h1>The Guess Who</h1>
+</p>
 <p align="center"><img src="./images/the-guess-who.jpg" alt="Integrantes" width="500" height="300"></p>
 
 ## Biografía
