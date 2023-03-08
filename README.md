@@ -1,5 +1,5 @@
-# <center>The Guess Who</center>
-   <center><img src="./images/the-guess-who.jpg" alt="Integrantes" width="500" height="300"></center>
+<p align="center"><h1>The Guess Who</h1></p>
+<p align="center"><img src="./images/the-guess-who.jpg" alt="Integrantes" width="500" height="300"></p>
 
 ## Biografía
 The Guess Who es una banda de rock canadiense formada en Winnipeg, Manitoba en 1965. La banda ha tenido varios miembros a lo largo de su historia, pero su alineación más conocida y exitosa incluye al cantante Burton Cummings, al guitarrista Randy Bachman, al bajista Jim Kale, al baterista Garry Peterson y al tecladista Bob Ashley.
