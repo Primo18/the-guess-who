@@ -105,10 +105,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem;
     gap: 3rem;
+    padding-top: 3rem;
+}
 
-
+iframe {
+    width: 25rem;
 }
 
 
