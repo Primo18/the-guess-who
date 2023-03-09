@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+.main,
+.footer {
+    padding: 20px;
+}
+
+
+/* Contenedor principal */
+.grid-container {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.flex-main {
+    background-color: rgb(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.element {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    flex-grow: 1;
+}
+
+.footer {
+    background-color: rgb(0, 0, 0, 0.9);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+/* Media Queries para tabletas */
+/* @media (min-width: 768px) and (max-width: 991px) {
+    .header__menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+} */
+
+/* Media Queries para dispositivos móviles */
+/* @media (max-width: 767px) {
+    .header__menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .titulo {
+        font-size: 1.2rem;
+    }
+} */
