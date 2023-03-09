@@ -57,6 +57,7 @@ body {
 .image img {
     width: 100%;
     object-fit: contain;
+    animation: image-animation 1s ease forwards;
 }
 
 .content {
@@ -73,18 +74,75 @@ body {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
-}
-
-.description {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
+    transform: translateY(50%);
+    animation: title-animation 1s ease forwards;
 }
 
 .rol {
     font-size: 1.2rem;
     font-weight: 300;
     margin-bottom: 1rem;
+    transform: translateY(50%);
+    animation: title-animation 1s ease forwards;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    transform: translateY(50%);
+    animation: description-animation 1s ease forwards;
+}
+
+
+
+@keyframes title-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes description-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rol-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes image-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
