@@ -27,100 +27,31 @@ html body {
   grid-template-rows: 1fr auto;
   min-height: 100vh;
 }
-
-.flex-main {
+.grid-container .flex-main {
   background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 3rem;
 }
-
-.element {
+.grid-container .flex-main .element {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
-
-.image {
+.grid-container .flex-main .element .image {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.image img {
+.grid-container .flex-main .element .image img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   animation: image-animation 1s ease forwards;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 2;
-  padding: 3rem;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  transform: translateY(50%);
-  animation: title-animation 1s ease forwards;
-}
-
-.rol {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
-  transform: translateY(50%);
-  animation: title-animation 1s ease forwards;
-}
-
-.description {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
-  transform: translateY(50%);
-  animation: description-animation 1s ease forwards;
-}
-
-@keyframes title-animation {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes description-animation {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes rol-animation {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 @keyframes image-animation {
   0% {
@@ -132,8 +63,72 @@ html body {
     transform: translateY(0);
   }
 }
-.footer {
+.grid-container .flex-main .element .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  padding: 3rem;
+}
+.grid-container .flex-main .element .content .title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+  transform: translateY(50%);
+  animation: title-animation 1s ease forwards;
+}
+@keyframes title-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.grid-container .flex-main .element .content .rol {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 1rem;
+  transform: translateY(50%);
+  animation: title-animation 1s ease forwards;
+}
+@keyframes rol-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.grid-container .flex-main .element .content .description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 1rem;
+  transform: translateY(50%);
+  animation: description-animation 1s ease forwards;
+}
+@keyframes description-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.grid-container .footer {
   background-color: rgba(0, 0, 0, 0.9);
+  font-size: 1rem;
+  font-weight: 300;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -166,7 +161,7 @@ html body {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .form .form-group textarea {
   resize: none;
@@ -178,19 +173,20 @@ html body {
   align-items: center;
   gap: 1rem;
 }
-.form .buttons > button {
+.form .buttons button {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
   display: inline-block;
   margin: 0 auto;
   background-color: #008CBA;
-  color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.form .buttons > button:hover {
+.form .buttons button:hover {
   background-color: #005F6B;
 }
 
@@ -206,16 +202,14 @@ html body {
 }
 /* Estilos para los albums */
 .albums {
-  color: #fff;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 3rem;
   padding-top: 3rem;
 }
-
-iframe {
+.albums iframe {
   width: 25rem;
 }
 

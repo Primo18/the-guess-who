@@ -14,7 +14,6 @@
     .form-group {
         margin-bottom: 20px;
 
-
         label {
             display: block;
             margin-bottom: 5px;
@@ -26,7 +25,7 @@
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
-            font-size: 16px;
+            font-size: 1rem;
         }
 
         textarea {
@@ -37,29 +36,26 @@
     }
 
     .buttons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
         gap: 1rem;
-    }
 
-    .buttons>button {
-        display: inline-block;
-        margin: 0 auto;
-        background-color: #008CBA;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+        button {
+            @include text(1rem, 400, #fff);
+            display: inline-block;
+            margin: 0 auto;
+            background-color: #008CBA;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
 
-    .buttons>button:hover {
-        background-color: #005F6B;
-    }
+            cursor: pointer;
+            transition: background-color 0.3s ease;
 
+            &:hover {
+                background-color: #005F6B;
+            }
+        }
+    }
 }
 
 @keyframes form-animation {
@@ -76,17 +72,12 @@
 
 /* Estilos para los albums */
 .albums {
-    color: #fff;
-    display: flex;
+    @include flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     gap: 3rem;
     padding-top: 3rem;
 
-}
-
-
-iframe {
-    width: 25rem;
+    iframe {
+        width: 25rem;
+    }
 }
