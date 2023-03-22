@@ -1,0 +1,92 @@
+/* Estilos para el formulario */
+.form {
+    width: 400px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50%);
+    animation: form-animation 1s ease forwards;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: none;
+            height: 150px;
+        }
+
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .buttons>button {
+        display: inline-block;
+        margin: 0 auto;
+        background-color: #008CBA;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .buttons>button:hover {
+        background-color: #005F6B;
+    }
+
+}
+
+@keyframes form-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para los albums */
+.albums {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding-top: 3rem;
+
+}
+
+
+iframe {
+    width: 25rem;
+}

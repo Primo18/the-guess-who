@@ -1,0 +1,35 @@
+/* Media Queries para tabletas */
+@media (min-width: 768px) and (max-width: 991px) {
+    .element {
+
+        flex-direction: column;
+    }
+
+    .albums {
+        flex-direction: column;
+    }
+
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 767px) {
+    .element {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .rol {
+        font-size: 1rem;
+    }
+
+    .albums {
+        flex-direction: column;
+    }
+}
