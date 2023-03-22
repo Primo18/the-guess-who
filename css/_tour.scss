@@ -1,0 +1,32 @@
+.table {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0, 0.8);
+
+    .row {
+        display: contents;
+    }
+
+    .header {
+        background-color: #ccc;
+        font-weight: bold;
+    }
+
+    .cell {
+        padding: 5px;
+        border: 1px solid #ccc;
+        text-align: center;
+        @include text(1rem, 400, #fff);
+    }
+
+    .btn {
+        background-color: $btn-color;
+
+        &:hover {
+            background-color: $btn-hover;
+        }
+    }
+}

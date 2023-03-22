@@ -38,23 +38,6 @@
     .buttons {
         @include flex;
         gap: 1rem;
-
-        button {
-            @include text(1rem, 400, #fff);
-            display: inline-block;
-            margin: 0 auto;
-            background-color: #008CBA;
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: none;
-
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: #005F6B;
-            }
-        }
     }
 }
 
