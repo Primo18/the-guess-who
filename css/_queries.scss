@@ -43,4 +43,13 @@
     }
 
 
+    .tour-row {
+        @include flex-column;
+
+        .col {
+            @include flex;
+
+        }
+    }
+
 }

@@ -1,32 +1,33 @@
-.table {
-    display: grid;
-    grid-template-rows: repeat(4, auto);
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 10px;
-    padding: 10px;
-    background-color: rgb(0, 0, 0, 0.8);
-
-    .row {
-        display: contents;
+.container-tour {
+    .col {
+        @include text(1.5rem, 300, #fff);
+        padding: 2rem 0;
+        animation: col-animation 1s ease forwards;
     }
 
-    .header {
-        background-color: #ccc;
-        font-weight: bold;
+
+}
+
+.img-tour {
+    width: 100%;
+    object-fit: contain;
+}
+
+.titulo-tour {
+    @include text(2rem, 600, #fff);
+    margin: 1rem;
+    transform: translateY(50%);
+    animation: title-animation 1s ease forwards;
+}
+
+@keyframes col-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
     }
 
-    .cell {
-        padding: 5px;
-        border: 1px solid #ccc;
-        text-align: center;
-        @include text(1rem, 400, #fff);
-    }
-
-    .btn {
-        background-color: $btn-color;
-
-        &:hover {
-            background-color: $btn-hover;
-        }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
