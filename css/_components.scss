@@ -1,6 +1,5 @@
 /* Estilos para el formulario */
 .form {
-    width: 400px;
     margin: 0 auto;
     opacity: 0;
     transform: translateY(50%);
@@ -8,21 +7,21 @@
 
     h2 {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
 
     .form-group {
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
 
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: .4rem;
         }
 
         input,
         textarea {
             width: 100%;
-            padding: 10px;
+            padding: 1rem;
             border-radius: 5px;
             border: 1px solid #ccc;
             font-size: 1rem;
@@ -30,7 +29,7 @@
 
         textarea {
             resize: none;
-            height: 150px;
+            height: 10rem;
         }
 
     }
@@ -62,5 +61,23 @@
 
     iframe {
         width: 25rem;
+    }
+}
+
+/* Boton */
+.btn {
+    @include text(1rem, 400, #fff);
+    display: inline-block;
+    margin: 0 auto;
+    background-color: $btn-color;
+    padding: .625rem 1.25rem;
+    border-radius: .3rem;
+    border: none;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $btn-hover;
     }
 }

@@ -1,113 +1,91 @@
-/* Contenedor principal */
-.grid-container {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+.element {
+    @include flex;
     min-height: 100vh;
 
-    .flex-main {
-        background-color: rgb(0, 0, 0, 0.8);
-        @include flex-column;
-        padding: 3rem;
+    .image {
+        flex: 1;
+        @include flex;
 
-        .element {
-            @include flex;
-            min-height: 100vh;
+        img {
+            width: 100%;
+            object-fit: contain;
+            animation: image-animation 1s ease forwards;
+        }
 
-            .image {
-                flex: 1;
-                @include flex;
-
-                img {
-                    width: 100%;
-                    object-fit: contain;
-                    animation: image-animation 1s ease forwards;
-                }
-
-                @keyframes image-animation {
-                    0% {
-                        opacity: 0;
-                        transform: translateY(50%);
-                    }
-
-                    100% {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-
+        @keyframes image-animation {
+            0% {
+                opacity: 0;
+                transform: translateY(50%);
             }
 
-            .content {
-                @include flex-column;
-                flex: 2;
-                padding: 3rem;
-
-                .title {
-                    @include text(2rem, 600, #fff);
-                    margin-bottom: 1rem;
-                    transform: translateY(50%);
-                    animation: title-animation 1s ease forwards;
-                }
-
-                @keyframes title-animation {
-                    0% {
-                        opacity: 0;
-                        transform: translateY(50%);
-                    }
-
-                    100% {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-
-                .rol {
-                    @include text(1.2rem, 300, #fff);
-                    margin-bottom: 1rem;
-                    transform: translateY(50%);
-                    animation: title-animation 1s ease forwards;
-                }
-
-                @keyframes rol-animation {
-                    0% {
-                        opacity: 0;
-                        transform: translateY(50%);
-                    }
-
-                    100% {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-
-                .description {
-                    @include text(1.2rem, 300, #fff);
-                    margin-bottom: 1rem;
-                    transform: translateY(50%);
-                    animation: description-animation 1s ease forwards;
-                }
-
-                @keyframes description-animation {
-                    0% {
-                        opacity: 0;
-                        transform: translateY(50%);
-                    }
-
-                    100% {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
+
     }
 
-    .footer {
-        background-color: rgb(0, 0, 0, 0.9);
-        @include text(1rem, 300, #fff);
-        @include flex;
-        padding: 1rem;
+    .content {
+        @include flex-column;
+        flex: 2;
+        padding: 3rem;
+
+        .title {
+            @include text(2rem, 600, #fff);
+            margin-bottom: 1rem;
+            transform: translateY(50%);
+            animation: title-animation 1s ease forwards;
+        }
+
+        @keyframes title-animation {
+            0% {
+                opacity: 0;
+                transform: translateY(50%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .rol {
+            @include text(1.2rem, 300, #fff);
+            margin-bottom: 1rem;
+            transform: translateY(50%);
+            animation: title-animation 1s ease forwards;
+        }
+
+        @keyframes rol-animation {
+            0% {
+                opacity: 0;
+                transform: translateY(50%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .description {
+            @include text(1.2rem, 300, #fff);
+            margin-bottom: 1rem;
+            transform: translateY(50%);
+            animation: description-animation 1s ease forwards;
+        }
+
+        @keyframes description-animation {
+            0% {
+                opacity: 0;
+                transform: translateY(50%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     }
 }

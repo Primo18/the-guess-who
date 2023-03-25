@@ -21,30 +21,11 @@ html body {
 
 /* Variables */
 /* Mixins */
-/* Boton */
-.btn {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-  display: inline-block;
-  margin: 0 auto;
-  background-color: #008CBA;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.btn:hover {
-  background-color: #005F6B;
-}
-
 /* Contenedor principal */
 .grid-container {
-  margin-top: 3rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 .grid-container .flex-main {
@@ -53,21 +34,31 @@ html body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
 }
-.grid-container .flex-main .element {
+.grid-container .footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.element {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
-.grid-container .flex-main .element .image {
+.element .image {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.grid-container .flex-main .element .image img {
+.element .image img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -83,7 +74,7 @@ html body {
     transform: translateY(0);
   }
 }
-.grid-container .flex-main .element .content {
+.element .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,7 +82,7 @@ html body {
   flex: 2;
   padding: 3rem;
 }
-.grid-container .flex-main .element .content .title {
+.element .content .title {
   font-size: 2rem;
   font-weight: 600;
   color: #fff;
@@ -109,7 +100,7 @@ html body {
     transform: translateY(0);
   }
 }
-.grid-container .flex-main .element .content .rol {
+.element .content .rol {
   font-size: 1.2rem;
   font-weight: 300;
   color: #fff;
@@ -127,7 +118,7 @@ html body {
     transform: translateY(0);
   }
 }
-.grid-container .flex-main .element .content .description {
+.element .content .description {
   font-size: 1.2rem;
   font-weight: 300;
   color: #fff;
@@ -145,15 +136,83 @@ html body {
     transform: translateY(0);
   }
 }
-.grid-container .footer {
-  background-color: rgba(0, 0, 0, 0.9);
+
+/* Estilos para el formulario */
+.form {
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50%);
+  animation: form-animation 1s ease forwards;
+}
+.form h2 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+.form .form-group {
+  margin-bottom: 1.25rem;
+}
+.form .form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.form .form-group input,
+.form .form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
   font-size: 1rem;
-  font-weight: 300;
-  color: #fff;
+}
+.form .form-group textarea {
+  resize: none;
+  height: 10rem;
+}
+.form .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  gap: 1rem;
+}
+
+@keyframes form-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Estilos para los albums */
+.albums {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding-top: 3rem;
+}
+.albums iframe {
+  width: 25rem;
+}
+
+/* Boton */
+.btn {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #008CBA;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #005F6B;
 }
 
 .table {
@@ -191,10 +250,9 @@ html body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 1rem;
-  margin: 1rem;
   padding: 1rem;
+  padding-top: 5rem;
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -209,67 +267,6 @@ html body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-/* Estilos para el formulario */
-.form {
-  width: 400px;
-  margin: 0 auto;
-  opacity: 0;
-  transform: translateY(50%);
-  animation: form-animation 1s ease forwards;
-}
-.form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.form .form-group {
-  margin-bottom: 20px;
-}
-.form .form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-.form .form-group input,
-.form .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-.form .form-group textarea {
-  resize: none;
-  height: 150px;
-}
-.form .buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-@keyframes form-animation {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Estilos para los albums */
-.albums {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-  padding-top: 3rem;
-}
-.albums iframe {
-  width: 25rem;
 }
 
 /* Media Queries para tabletas */
@@ -297,5 +294,12 @@ html body {
   }
   .albums {
     flex-direction: column;
+  }
+  .albums iframe {
+    width: 100%;
+  }
+  .grid-img {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 }/*# sourceMappingURL=main.css.map */

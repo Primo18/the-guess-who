@@ -1,0 +1,22 @@
+/* Contenedor principal */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+
+
+
+    .flex-main {
+
+        background-color: rgb(0, 0, 0, 0.8);
+        @include flex-column;
+    }
+
+    .footer {
+        background-color: rgb(0, 0, 0, 0.9);
+        @include text(1rem, 300, #fff);
+        @include flex;
+        padding: 1rem;
+    }
+}

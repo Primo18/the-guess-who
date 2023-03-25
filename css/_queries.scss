@@ -31,5 +31,16 @@
 
     .albums {
         flex-direction: column;
+
+        iframe {
+            width: 100%;
+        }
     }
+
+    .grid-img {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+
 }
